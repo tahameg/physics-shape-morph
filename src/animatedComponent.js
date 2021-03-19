@@ -48,23 +48,23 @@ const AnimatedBox = (props) => {
         }
       });
 
-    const StyledContainer = styled.div`
-        margin: auto;
-        margin-top: 100px;
-        width: 400px;
-        height: 400px;
-        border: 2px solid white;
+    const div_style = {
+        margin: "auto",
+        marginTop: "100px",
+        width: "400px",
+        height: "400px",
+        border: "2px solid white"
 
-    `
+    }
     return(
-        <StyledContainer className="container" onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)}>
+        <div style={div_style} className="container" onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)}>
             <Shape stroke={props3.stroke}
                    fill={props3.fill}
                    shape={props3.shape}
                    position={props3.position}
                     />
 
-        </StyledContainer>
+        </div>
     );
 }
 
